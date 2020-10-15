@@ -23,6 +23,9 @@ public class ViewCount extends Configured implements Tool {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
 
+        //We are saying to partition data to 2 reducers, we will have 2 output files now
+        job.setNumReduceTasks(2);
+
         job.setMapperClass(Map.class);
         job.setReducerClass(Reduce.class);
 
