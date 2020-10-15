@@ -9,8 +9,8 @@ import java.io.IOException;
  * The Mapper class for ViewCount. It outputs key value pairs of the form (member,1)
  */
 public class Map extends Mapper<LongWritable, Text, Text, IntWritable> {
-    @Override
 
+    @Override
     public void map(LongWritable key, Text value, Context context)
             throws IOException, InterruptedException {
         String[] row = value.toString().split("\t");
