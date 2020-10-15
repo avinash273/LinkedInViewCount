@@ -30,6 +30,7 @@ public class ViewCount extends Configured implements Tool {
         job.setReducerClass(Reduce.class);
 
         //Combiner is added here, it will make it faster
+        //We are using the same reducer class our combiner
         job.setCombinerClass(Reduce.class);
 
         Path inputFilePath = new Path(args[0]);
